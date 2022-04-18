@@ -1,0 +1,124 @@
+@import 'mixin';
+@import 'colors';
+
+.container{
+
+    width: 50%;
+    margin: 0 auto;
+    
+    &-fluid{    
+        width: 100%;    
+        margin: 0;
+
+    }
+        .container__row{
+            margin-top: 100px;
+            width: 100%;
+            background-image: linear-gradient($bg-img-gradient1, $bg-img-gradient2,$bg-img-gradient3);
+            box-shadow: 2px 2px 2px 2px $box-shadow-color;
+            display: flex;
+            flex-wrap: wrap;
+            .large-title{
+                @include breakpoint(mobile){
+                    font-size: 20px;
+                    width: 100%;
+            
+                }
+                @include breakpoint(small){
+                    font-size: 30px;
+                    width: 100%;
+                    
+                }
+                @include breakpoint(medium){
+                    font-size: 50px;
+                    width: 40%;
+                    
+                }
+                @include breakpoint(large){
+                    font-size:20px;
+                    width: 50%;
+                    margin-left: 20px;
+                }
+                margin-left:4%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                justify-content: center;
+            
+                img {
+                    @include breakpoint(mobile){
+                        font-size: 20px;
+                        width: 100%;
+                
+                    }
+                    @include breakpoint(small){
+                        font-size: 30px;
+                        width: 100%;
+                        
+                    }
+                    @include breakpoint(medium){
+                        font-size: 50px;
+                        width: 100%;
+                        
+                    }
+                    @include breakpoint(large){
+                        font-size:20px;
+                        width: 80%;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .form-media {
+                width: 200px;
+                background-color: white;
+                color: $form-media-color;
+                text-align: center;
+                margin-left: 4%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 5px;
+                font-size: 30px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                $box-shadow-form-media: 2px 2px 2px 2px rgb(105, 9, 105);
+
+                .form-userlogin {
+                    margin-top: 50px;
+                    letter-spacing: 1;
+                    font-weight: bold;
+                    text-align: center;
+                    font-family:Garamond;
+                }
+
+                
+                .button-primary {
+                    font-size: large;
+                    margin-top: 10px;
+                    color: white;
+                    width: 150px;
+                    height: 25px;
+                    border-radius: 5px;
+                    background-image: linear-gradient(to right, $btn-linear-gradient-1 , $btn-linear-gradient-2);
+                }
+
+                ::placeholder {
+                    color: white;
+                }
+                
+                .input-ordinary {
+                    margin-top: 40px;
+                    margin: 10px;
+                    width: 150px;
+                    height: 25px;
+                    background-color:$input-clr;
+                    border-radius: 5px;
+                    border-style: hidden;
+                }
+
+            }
+
+        }
+        
+}
+
+
+
